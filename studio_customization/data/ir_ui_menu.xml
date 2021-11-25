@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.fabricacion_folios_53a35442-a44d-453a-a42e-277344391a50" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.folios_e443e58b-0380-47ac-a378-509c8c2d4215"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Folios</field>
+    <field name="parent_id" ref="mrp.menu_mrp_root"/>
+    <field name="sequence">101</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+</odoo>

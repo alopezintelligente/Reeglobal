@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.activo_folios_81087793-9436-46ff-a7ed-5cef09c9fe79" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.activo_folios_4d439791-a074-4abf-920e-2a8af201702f"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_2604f268-5b51-4539-92ef-467477261e96" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_e84db341-a20b-49e7-b125-3c8303eac56d"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_5c4a2092-11e2-45a2-aced-2ef1fb2b7fa1" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_c98b6700-cefe-4ab4-8a61-d0bbf4628031"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_9406afb9-05d6-4ec0-bd8e-a4e85026425e" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_256ca993-b3af-4041-b208-86cb9642853a"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_9b12c1d2-ee5f-458f-a764-d65bb1af0d4a" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_6a424959-e8e2-4c72-912b-ef3fca490a3a"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_a762d892-3f07-44ea-afed-8c7efe5fcc41" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_1b43ed9a-11eb-445a-bc6b-6bab7a275064"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_c968bb39-792c-46aa-854e-b86fae3444c6" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_35bf8b1c-b09c-487a-b9c4-afc15b415ae6"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_cba9cf37-e0b6-4aa1-8b14-27e48f64d83b" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_9efdff93-ccfc-4cb2-b408-837a433c42aa"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_producti_d4dea492-b468-4acc-b47e-92f5fceba32b" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_producti_9ad1ffbd-5e94-410a-8c3c-27bcde233b32"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_sales_or_1c2a5121-ec70-4174-a349-91db46efb4d3" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_sales_or_404dc449-d121-48d8-a300-5446bcc9da23"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_sales_or_90001eb9-4f03-4bd0-99d9-17d9ab4c8e30" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_sales_or_e20d643c-13d2-4316-8262-e98c094d27d1"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_sales_or_cb39ed8f-7878-4065-8b86-d4a794cec325" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_sales_or_e590bdfa-8e37-40fa-b983-3621874af289"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_transfer_a5c29d6f-6b36-4417-93f8-3779aa1e3d4a" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_transfer_eab720aa-841f-4be6-b552-69149dd9eb74"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_work_cen_7ddaa042-b047-41da-bce9-61663f5c0259" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_work_cen_247c1e95-e450-46c2-bed7-7350ecbe2e80"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_work_cen_b0fae595-1aae-4659-abb4-50682b4f299a" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_work_cen_7bea4643-2f64-4485-a954-618f10e16cbb"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_work_cen_dd3d99f8-adde-47b7-9e9d-f30aa509e8aa" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_work_cen_b8fe79a2-c24c-47a7-978b-6d95a2569308"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.secuencia_folios_719c2ba3-2dfc-4dff-a73a-7feebcfb1527" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.secuencia_folios_418d84d8-8819-41da-8447-8fd242036967"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+</odoo>

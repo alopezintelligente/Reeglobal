@@ -1,0 +1,8 @@
+The following relational data haven't been exported because they either refer
+to a model that Studio doesn't export, or have no XML id:
+
+Record: base.paperformat_euro
+Model: report.paperformat
+Field: report_ids
+Type: one2many
+Value: ir.actions.report(607,) ('ORDEN DE TEJIDO')

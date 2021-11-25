@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.cotizacion_orden_c25c1050-cbf8-4e9d-8372-05edcdb4730c" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="sale.model_sale_order"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">sale.order</field>
+    <field name="multi" eval="False"/>
+    <field name="name">ORDEN DE TEJIDO</field>
+    <field name="paperformat_id" ref="base.paperformat_euro"/>
+    <field name="report_name">sale.report_saleorder_copy_1</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+  <record id="studio_customization.informe_de_cantidad__23107194-7eab-4f15-95bd-546d5b8d85c1" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="stock.model_report_stock_quantity"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">report.stock.quantity</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Informe de cantidad de stock Reporte</field>
+    <field name="paperformat_id" eval="False"/>
+    <field name="report_name">studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+  <record id="studio_customization.orden_de_produccion_4c34ba96-439c-41a7-bd31-f02f744f7dd5" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">mrp.production</field>
+    <field name="multi" eval="False"/>
+    <field name="name">FICHA TÉCNICA</field>
+    <field name="paperformat_id" eval="False"/>
+    <field name="report_name">mrp.report_mrporder_copy_1</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+</odoo>

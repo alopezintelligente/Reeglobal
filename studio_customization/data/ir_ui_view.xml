@@ -1,0 +1,1879 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.default_form_view_fo_013d4923-8049-472b-a6bc-3b6a8d210fdd" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form create="false" delete="false" edit="false">
+        <sheet string="Stock Quantity Report">
+          <group col="4">
+            <field name="date" modifiers="{&quot;readonly&quot;: true}"/>
+            <field name="product_tmpl_id" can_create="true" can_write="true" modifiers="{&quot;readonly&quot;: true}"/>
+            <field name="product_id" on_change="1" can_create="true" can_write="true" modifiers="{&quot;readonly&quot;: true}"/>
+            <field name="state" modifiers="{&quot;readonly&quot;: true}"/>
+            <field name="product_qty" modifiers="{&quot;readonly&quot;: true}"/>
+            <newline/>
+            <field name="move_ids" colspan="4" modifiers="{&quot;readonly&quot;: true}"/>
+            <newline/>
+            <field name="company_id" can_create="true" can_write="true" modifiers="{&quot;readonly&quot;: true}"/>
+            <field name="warehouse_id" can_create="true" can_write="true" modifiers="{&quot;readonly&quot;: true}"/>
+            <separator/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">report.stock.quantity</field>
+    <field name="name">Default form view for ir.model(471,)</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_form_view_fo_d07e8e10-edd0-464f-a5a6-fb5e8b34c59a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Folios">
+          <widget name="web_ribbon" text="Archivado" bg_color="bg-danger" attrs="{'invisible': [('x_active', '=', True)]}"/>
+          <field name="x_active" invisible="1"/>
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_d4d200">
+            <group name="studio_group_d4d200_left"/>
+            <group name="studio_group_d4d200_right"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter" name="oe_chatter">
+          <field name="message_follower_ids"/>
+          <field name="message_ids"/>
+          <field name="activity_ids"/>
+        </div>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_folios</field>
+    <field name="name">Default form view for x_folios</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_kanban_view__0dc94f33-310a-477d-a5ab-3f85faca576a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <kanban string="Stock Quantity Report" create="false" delete="false" edit="false">
+        <templates>
+          <t t-name="kanban-box">
+            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+              <div class="o_kanban_card_content">
+                <field name="id" modifiers="{&quot;readonly&quot;: true}"/>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">report.stock.quantity</field>
+    <field name="name">Default kanban view for ir.model(471,)</field>
+    <field name="priority">16</field>
+    <field name="type">kanban</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_e7ade6dc-b492-4f26-bd1e-b07473d72399" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_folios</field>
+    <field name="name">Default list view for x_folios</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_pivot_view_f_142357cd-5c61-4809-b642-7ea836162778" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <pivot string="Stock Quantity Report"/>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">report.stock.quantity</field>
+    <field name="name">Default pivot view for ir.model(471,)</field>
+    <field name="priority">16</field>
+    <field name="type">pivot</field>
+  </record>
+  <record id="studio_customization.default_search_view__82b7df73-ce14-4f00-a917-2861dfa8f6f8" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+        <separator/>
+        <filter string="Archivado" name="archived_x_folios" domain="[['x_active', '=', False]]"/>
+        <separator/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_folios</field>
+    <field name="name">Default search view for x_folios</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.default_tree_view_fo_29dd04e6-8f7b-494b-80e3-cab1774b455a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree string="Stock Quantity Report" create="false" delete="false" edit="false">
+        <field name="id" modifiers="{&quot;readonly&quot;: true}"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">report.stock.quantity</field>
+    <field name="name">Default tree view for ir.model(471,)</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_prod_3c74f114-b2b8-4819-85a7-a9390394fcf2" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='id']" position="before">
+          <field name="x_studio_nombre_del_articulo" string="NOMBRE DEL ARTICULO"/>
+          <field name="x_studio_fecha_de_desarrollo" string="FECHA DE DESARROLLO"/>
+          <field name="x_studio_folio" string="Folio"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='components']/field[@name='move_raw_ids']/tree[1]/field[@name='product_id']" position="after">
+          <field name="x_studio_factura_cliente"/>
+          <field name="x_studio_lote_cliente"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="after">
+          <group name="studio_group_Bm16L">
+            <field name="x_studio_ficha_tcnica" string="FICHA TÉCNICA"/>
+          </group>
+          <group name="studio_group_UjrYx">
+            <group name="studio_group_UjrYx_left" string="MAQUINA">
+              <field name="x_studio_num_maquina_1" string="NUM. MAQUINA"/>
+              <field name="x_studio_calga" string="CALGA"/>
+              <field name="x_studio_diametro" string="DIAMETRO"/>
+              <field name="x_studio_titulo_de_hilo" string="TITULO DE HILO"/>
+              <field name="x_studio_composicin" string="COMPOSICIÓN"/>
+              <field name="x_studio_proveedor" string="PROVEEDOR"/>
+              <field name="x_studio_long_de_malla" string="LONG. DE MALLA"/>
+              <field name="x_studio_draw" string="DRAW"/>
+              <field name="x_studio_lote" string="LOTE"/>
+            </group>
+            <group name="studio_group_UjrYx_right" string="CARACTERISTICAS EN CRUDO">
+              <field name="x_studio_peso_en_crudo" string="PESO EN CRUDO"/>
+              <field name="x_studio_ancho_en_crudo" string="ANCHO EN CRUDO"/>
+              <field name="x_studio_columnas" string="COLUMNAS"/>
+              <field name="x_studio_mallas" string="MALLAS"/>
+              <field name="x_studio_rendimiento" string="RENDIMIENTO"/>
+              <field name="x_studio_obs_tejido" string="OBS. TEJIDO:"/>
+            </group>
+          </group>
+          <group name="studio_group_r6wjy">
+            <group name="studio_group_r6wjy_left" string="CARACTERISTICAS DE ACABADO">
+              <field name="x_studio_peso_acabado" string="PESO ACABADO"/>
+              <field name="x_studio_ancho_acabado" string="ANCHO ACABADO"/>
+              <field name="x_studio_columnas_1" string="COLUMNAS"/>
+              <field name="x_studio_mallas_1" string="MALLAS"/>
+              <field name="x_studio_eng_ancho" string="ENG. ANCHO"/>
+              <field name="x_studio_eng_largo" string="ENG. LARGO"/>
+              <field name="x_studio_torque" string="TORQUE"/>
+              <field name="x_studio_rendimiento_1" string="RENDIMIENTO"/>
+              <field name="x_studio_obs_acabado" string="OBS. ACABADO"/>
+            </group>
+            <group name="studio_group_r6wjy_right" string="ALIMENTADORES">
+              <field name="x_studio_alimentadores" string="ALIMENTADORES"/>
+              <field name="x_studio_num_de_agujas" string="NUM. DE AGUJAS"/>
+              <field name="x_studio_polea_superior" string="POLEA SUPERIOR"/>
+              <field name="x_studio_polea_inferior_1" string="POLEA INFERIOR"/>
+              <field name="x_studio_velocidad_rpm" string="VELOCIDAD RPM"/>
+              <field name="x_studio_peso_rollo_kg" string="PESO ROLLO (KG)"/>
+            </group>
+          </group>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.production</field>
+    <field name="name">Odoo Studio: mrp.production.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_prod_a3815707-d4fa-406c-a74e-9af5a2448e09" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="x_studio_cliente" string="Cliente"/>
+          <field name="x_studio_folio"/>
+          <field name="x_studio_lote" string="Lote"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.production</field>
+    <field name="name">Odoo Studio: mrp.production.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_prod_d9bcef98-0289-4141-9fa0-938880a40edc" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name'][2]" position="after">
+          <field name="x_studio_cliente_1" string="Cliente"/>
+          <field name="x_studio_folio" string="Folio"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.workorder</field>
+    <field name="name">Odoo Studio: mrp.production.work.order.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_work_650c8492-634f-466b-a9e5-8ef625057374" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='name']" position="after">
+          <field name="x_studio_diametro_1" string="Diametro"/>
+          <field name="x_studio_galga_1" string="Galga"/>
+          <field name="x_studio_alimentadores" string="Alimentadores"/>
+          <field name="x_studio_agujas" string="Agujas"/>
+          <field name="x_studio_grupo" string="Grupo"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.workcenter</field>
+    <field name="name">Odoo Studio: mrp.workcenter.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_purchase_55378d56-bbf9-427a-9139-ff112d099237" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="x_studio_cliente_final" string="Cliente final"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='products']/field[@name='order_line']/tree[1]/field[@name='product_qty']" position="after">
+          <field name="x_studio_unidad" string="Unidad"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="purchase.purchase_order_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">purchase.order</field>
+    <field name="name">Odoo Studio: purchase.order.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.report_mrporder_6604ef4b-f869-47f0-86b2-3314574f107c" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp.report_mrporder_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.internal_layout">
+              <div class="page">
+                <div class="oe_structure"/>
+                <div class="row">
+                  <div class="col-7">
+                    <h2>
+                      <span t-field="o.name"/>
+                    </h2>
+                  </div>
+                  <div class="col-5">
+                    <span class="text-right">
+                      <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:350px;height:60px"/>
+                    </span>
+                  </div>
+                </div>
+                <div class="row mt32 mb32">
+                  <div class="col-3" t-if="o.origin">
+                    <strong>Documento de origen:</strong>
+                    <br/>
+                    <span t-field="o.origin"/>
+                  </div>
+                  <div class="col-3">
+                    <strong>Responsable:</strong>
+                    <br/>
+                    <span t-field="o.user_id"/>
+                  </div>
+                </div>
+                <div class="row mt32 mb32">
+                  <div class="col-3">
+                    <strong>Producto terminado:</strong>
+                    <br/>
+                    <span t-field="o.product_id"/>
+                  </div>
+                  <div class="col-3" t-if="o.product_description_variants">
+                    <strong>Descripción:</strong>
+                    <br/>
+                    <span t-field="o.product_description_variants"/>
+                  </div>
+                  <div class="col-3">
+                    <strong>Cantidad a producir:</strong>
+                    <br/>
+                    <span t-field="o.product_qty"/>
+                    <span t-field="o.product_uom_id.name" groups="uom.group_uom"/>
+                  </div>
+                </div>
+                <div t-if="o.workorder_ids">
+                  <h3>
+                    <span t-if="o.state == 'done'">Operaciones terminadas</span>
+                    <span t-else="">Operaciones planeadas</span>
+                  </h3>
+                  <table class="table table-sm">
+                    <tr>
+                      <th>
+                        <strong>Operación</strong>
+                      </th>
+                      <th>
+                        <strong>Centro de trabajo</strong>
+                      </th>
+                      <th>
+                        <strong>No. de minutos</strong>
+                      </th>
+                    </tr>
+                    <tr t-foreach="o.workorder_ids" t-as="line2">
+                      <td>
+                        <span t-field="line2.name"/>
+                      </td>
+                      <td>
+                        <span t-field="line2.workcenter_id.name"/>
+                      </td>
+                      <td>
+                        <span t-if="o.state != 'done'" t-field="line2.duration_expected"/>
+                        <span t-if="o.state == 'done'" t-field="line2.duration"/>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <h3 t-if="o.move_raw_ids">
+                  <span t-if="o.state == 'done'">
+                            Productos consumidos
+                        </span>
+                  <span t-else="">
+                            Productos a consumir
+                        </span>
+                </h3>
+                <table class="table table-sm" t-if="o.move_raw_ids">
+                  <t t-set="has_product_barcode" t-value="any(m.product_id.barcode for m in o.move_raw_ids)"/>
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">Cantidad</th>
+                      <th t-if="has_product_barcode" width="15%" class="text-center">Código de barras</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <t t-if="o.move_raw_ids">
+                      <tr t-foreach="o.move_raw_ids" t-as="raw_line">
+                        <td>
+                          <span t-field="raw_line.product_id"/>
+                        </td>
+                        <td t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">
+                          <span t-field="raw_line.product_uom_qty"/>
+                          <span t-field="raw_line.product_uom" groups="uom.group_uom"/>
+                        </td>
+                        <td t-if="has_product_barcode" width="15%" class="text-center">
+                          <t t-if="raw_line.product_id.barcode">
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', raw_line.product_id.barcode, 600, 100)" style="width:100%;height:35px" alt="Código de barras"/>
+                          </t>
+                        </td>
+                      </tr>
+                    </t>
+                  </tbody>
+                </table>
+                <div class="oe_structure"/>
+              </div>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp.report_mrporder_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_mrporder copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_report_m_7a9a5b21-6ce5-4ecc-916d-3a4001058f18" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/t/t/div/div[6]" position="after">
+          <div class="row">
+            <div class="col-6">
+              <span>New Column</span>
+            </div>
+            <div class="col-6">
+              <span>New Column</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]/div[1]/span" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]/div[1]/span[2]" position="after">
+          <span t-field="o.x_studio_num_maquina_1"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]/div[1]/span[2]" position="replace">
+          <span>NUM. MAQUINA:</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[8]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[8]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.x_studio_num_maquina_1"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[8]/div/span" position="replace">
+          <span>NUMERO DE MAQUINA</span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[7]/div[1]/span[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[7]/div[1]/span[2]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[7]/div[1]/span" position="replace">
+          <span>MAQUINA</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[10]/div/span" position="replace">
+          <span>GALGA</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[10]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.x_studio_diametro"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[11]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[12]/div/span" position="replace">
+          <span>DIAMETRO</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[12]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.x_studio_diametro"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[13]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>TITULO DE HILO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_titulo_de_hilo"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[14]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>TITULO DE HILO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_titulo_de_hilo"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[14]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.x_studio_titulo_de_hilo"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[16]/div[1]/span[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[14]/div[1]/span[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[15]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>TITULO DE HILO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_titulo_de_hilo"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[17]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>COMPOSICIÓN:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_composicin"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[18]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>PROVEEDOR:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_proveedor"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[8]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[9]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[7]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[10]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[11]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[12]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[13]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[13]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>NUM. MAQUINA:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_num_maquina_1"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[20]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>CALGA:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_calga"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[21]/div[1]/span[1]" position="replace">
+          <span>
+            <strong>GALGA:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[21]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[14]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>CALGA:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_calga"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[17]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>DIAMETRO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_diametro"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[22]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>LONG. DE MALLA:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_long_de_malla"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[23]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>DRAW:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_draw"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[24]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>LOTE:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_lote"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]/div/span" position="replace">
+          <span>MAQUINA</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]/div/span" position="replace">
+          <span>MAQUINA</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[13]" position="after">
+          <div class="row">
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3">
+              <span>
+                <strong>PESO EN CRUDO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_peso_en_crudo"/>
+            </div>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[14]" position="after">
+          <div class="row">
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3">
+              <span>
+                <strong>ANCHO EN CRUDO:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_ancho_en_crudo"/>
+            </div>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[28]" position="after">
+          <div class="row">
+            <div class="col-4">
+              <span>New Column</span>
+            </div>
+            <div class="col-4">
+              <span>New Column</span>
+            </div>
+            <div class="col-4">
+              <span>New Column</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[28]/div[3]" position="inside">
+          <span>
+            <strong>PESO EN CRUDO:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[28]/div[3]" position="inside">
+          <span t-field="o.x_studio_peso_en_crudo"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[28]/div[3]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[29]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[29]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[29]/div[2]/span" position="replace">
+          <span>
+            <p>New Column<br/><br/></p>
+            <p>
+              <br/>
+            </p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[29]/div[2]/span/p[2]/br" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[29]/div[3]/span" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[29]/div[3]/span[2]" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[16]/div[3]" position="attributes">
+          <attribute name="class" separator=" " add="col-1" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[16]/div[3]" position="attributes">
+          <attribute name="class" separator=" " add="offset-3"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[16]/div[3]" position="attributes">
+          <attribute name="class" separator=" " add="col-3" remove="col-1"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[16]/div[3]" position="attributes">
+          <attribute name="class" separator=" " add="offset-0" remove="offset-3"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.report_mrporder_6604ef4b-f869-47f0-86b2-3314574f107c"/>
+    <field name="key">gen_key.bd23cd</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: report_mrporder copy(1) customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_report_p_5b5e50b7-61c3-4fb1-b7cf-1c31e60a613b" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/t/t/div/div[1]" position="before">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Factura cliente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_factura_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[1]/div[1]/span[1]/strong" position="after">
+          <span t-field="o.x_studio_lote_cliente"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[1]/div[1]" position="inside">
+          <span t-field="o.x_studio_factura_cliente"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[1]/div[2]" position="inside">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[1]/div[2]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[1]/div[2]" position="inside">
+          <span t-field="o.x_studio_factura_cliente"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[1]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Factura clieeeeente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_factura_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[3]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Lote cliente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_lote_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[5]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Factura cliente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_factura_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[2]/div[1]/span[1]/strong[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[2]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[4]/div[1]/span[1]/strong[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[4]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[6]/div[1]/span[1]/strong[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/t[1]/t[1]/div[1]/div[6]/div[1]" position="replace"/>
+        <xpath expr="/t/t/t/t/div/div[5]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Factura cliente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_factura_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[7]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Lote cliente:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_lote_cliente"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[8]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Cajas recibidas:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_cajas_recibidas"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/t/t/div/div[4]" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Cliente final:</strong>
+                <br/>
+              </span>
+              <span t-field="o.x_studio_cliente_final"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.report_picking"/>
+    <field name="key">gen_key.982ea9</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: report_picking customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.report_saleorder_doc_d9315b1c-0697-4f13-9083-fa98b8421206" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="sale.report_saleorder_document_copy_1">
+        <t t-call="web.external_layout">
+          <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+          <t t-set="address">
+            <div t-field="doc.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+            <p t-if="doc.partner_id.vat"><t t-esc="doc.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="doc.partner_id.vat"/></p>
+          </t>
+          <t t-if="doc.partner_shipping_id == doc.partner_invoice_id                              and doc.partner_invoice_id != doc.partner_id                              or doc.partner_shipping_id != doc.partner_invoice_id">
+            <t t-set="information_block">
+              <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Dirección de facturación y envío:</strong>
+              <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Dirección de facturación:</strong>
+              <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+              <t t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+                <strong>Dirección de Entrega:</strong>
+                <div t-field="doc.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+              </t>
+            </t>
+          </t>
+          <div class="page">
+            <div class="oe_structure"/>
+            <h2 class="mt16">
+              <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                <span t-if="doc.state not in ['draft','sent']">Número de orden </span>
+                <span t-if="doc.state in ['draft','sent']">Número de cotización </span>
+              </t>
+              <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                <span>Factura proforma número </span>
+              </t>
+              <span t-field="doc.name"/>
+            </h2>
+            <div class="row mt32 mb32" id="informations">
+              <div t-if="doc.client_order_ref" class="col-auto col-3 mw-100 mb-2">
+                <strong>Su referencia:</strong>
+                <p class="m-0" t-field="doc.client_order_ref"/>
+              </div>
+              <div t-if="doc.date_order and doc.state not in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
+                <strong>Fecha de la orden:</strong>
+                <p class="m-0" t-field="doc.date_order"/>
+              </div>
+              <div t-if="doc.date_order and doc.state in ['draft','sent']" class="col-auto col-3 mw-100 mb-2">
+                <strong>Fecha de la cotización:</strong>
+                <p class="m-0" t-field="doc.date_order" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+              </div>
+              <div t-if="doc.validity_date and doc.state in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+                <strong>Vencimiento:</strong>
+                <p class="m-0" t-field="doc.validity_date"/>
+              </div>
+              <div class="col-3" t-if="doc.incoterm" groups="sale_stock.group_display_incoterm">
+                <strong>Incoterm:</strong>
+                <p t-field="doc.incoterm.code"/>
+              </div>
+              <div t-if="doc.user_id.name" class="col-auto col-3 mw-100 mb-2">
+                <strong>Vendedor:</strong>
+                <p class="m-0" t-field="doc.user_id"/>
+              </div>
+            </div>
+            <!-- Is there a discount on at least one line? -->
+            <t t-set="display_discount" t-value="any(l.discount for l in doc.order_line)"/>
+            <table class="table table-sm o_main_table">
+              <!-- In case we want to repeat the header, remove "display: table-row-group" -->
+              <thead style="display: table-row-group">
+                <tr>
+                  <th name="th_description" class="text-left">Descripción</th>
+                  <th name="th_quantity" class="text-right">Cantidad</th>
+                  <th name="th_priceunit" class="text-right">Precio unitario</th>
+                  <th name="th_discount" t-if="display_discount" class="text-right" groups="product.group_discount_per_so_line">
+                    <span>Desc.%</span>
+                  </th>
+                  <th name="th_taxes" class="text-right">Impuestos</th>
+                  <th name="th_subtotal" class="text-right">
+                    <span groups="account.group_show_line_subtotals_tax_excluded">Importe</span>
+                    <span groups="account.group_show_line_subtotals_tax_included">Precio total </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="sale_tbody">
+                <t t-set="current_subtotal" t-value="0"/>
+                <t t-foreach="doc.order_line" t-as="line">
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                  <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                  <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                    <t t-if="not line.display_type">
+                      <td name="td_name">
+                        <span t-field="line.name"/>
+                      </td>
+                      <td name="td_quantity" class="text-right">
+                        <span t-field="line.product_uom_qty"/>
+                        <span t-field="line.product_uom"/>
+                      </td>
+                      <td name="td_priceunit" class="text-right">
+                        <span t-field="line.price_unit"/>
+                      </td>
+                      <td t-if="display_discount" class="text-right" groups="product.group_discount_per_so_line">
+                        <span t-field="line.discount"/>
+                      </td>
+                      <td name="td_taxes" class="text-right">
+                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                      </td>
+                      <td name="td_subtotal" class="text-right o_price_total">
+                        <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+                      </td>
+                    </t>
+                    <t t-if="line.display_type == 'line_section'">
+                      <td name="td_section_line" colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                      <t t-set="current_section" t-value="line"/>
+                      <t t-set="current_subtotal" t-value="0"/>
+                    </t>
+                    <t t-if="line.display_type == 'line_note'">
+                      <td name="td_note_line" colspan="99">
+                        <span t-field="line.name"/>
+                      </td>
+                    </t>
+                  </tr>
+                  <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section')">
+                    <tr class="is-subtotal text-right">
+                      <td name="td_section_subtotal" colspan="99">
+                        <strong class="mr16">Subtotal</strong>
+                        <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                      </td>
+                    </tr>
+                  </t>
+                </t>
+              </tbody>
+            </table>
+            <div class="clearfix" name="so_total_summary">
+              <div id="total" class="row" name="total">
+                <div t-attf-class="#{'col-4' if report_type != 'html' else 'col-sm-7 col-md-5'} ml-auto">
+                  <table class="table table-sm">
+                    <tr class="border-black o_subtotal" style="">
+                      <td name="td_amount_untaxed_label">
+                        <strong>Subtotal</strong>
+                      </td>
+                      <td name="td_amount_untaxed" class="text-right">
+                        <span t-field="doc.amount_untaxed"/>
+                      </td>
+                    </tr>
+                    <t t-foreach="doc.amount_by_group" t-as="amount_by_group">
+                      <tr style="">
+                        <t t-if="amount_by_group[5] == 1 and doc.amount_untaxed == amount_by_group[2]">
+                          <td name="td_amount_by_group_label_3">
+                            <span t-esc="amount_by_group[0]"/>
+                            <span>&amp;nbsp;<span>en</span>&amp;nbsp;<t t-esc="amount_by_group[2]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/></span>
+                          </td>
+                          <td name="td_amount_by_group_3" class="text-right o_price_total">
+                            <span t-esc="amount_by_group[1]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                          </td>
+                        </t>
+                        <t t-else="">
+                          <td name="td_amount_by_group_label">
+                            <span t-esc="amount_by_group[0]"/>
+                          </td>
+                          <td name="td_amount_by_group" class="text-right o_price_total">
+                            <span t-esc="amount_by_group[1]" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                          </td>
+                        </t>
+                      </tr>
+                    </t>
+                    <tr class="border-black o_total">
+                      <td name="td_amount_total_label">
+                        <strong>Total</strong>
+                      </td>
+                      <td name="td_amount_total" class="text-right">
+                        <span t-field="doc.amount_total"/>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div t-if="doc.signature" class="mt32 ml64 mr4" name="signature">
+              <div class="offset-8">
+                <strong>Firma</strong>
+              </div>
+              <div class="offset-8">
+                <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
+              </div>
+              <div class="offset-8 text-center">
+                <p t-field="doc.signed_by"/>
+              </div>
+            </div>
+            <div t-if="doc.sale_order_option_ids and doc.state in ['draft', 'sent']">
+              <t t-set="has_option_discount" t-value="any(option.discount != 0.0 for option in doc.sale_order_option_ids)"/>
+              <h4 name="h_optional_products">
+                <span>Opciones</span>
+              </h4>
+              <table name="table_optional_products" class="table table-sm">
+                <thead>
+                  <tr>
+                    <th name="th_option_name" class="text-left">Descripción</th>
+                    <th t-if="has_option_discount" name="th_option_discount" groups="product.group_discount_per_so_line" class="text-left">Desc.%</th>
+                    <th name="th_option_price_unit" class="text-right">Precio unitario</th>
+                  </tr>
+                </thead>
+                <tbody class="sale_tbody">
+                  <tr t-foreach="doc.sale_order_option_ids" t-as="option">
+                    <td name="td_option_name">
+                      <span t-field="option.name"/>
+                    </td>
+                    <td t-if="has_option_discount" name="td_option_discount" groups="product.group_discount_per_so_line">
+                      <strong t-if="option.discount != 0.0" class="text-info"><t t-esc="((option.discount % 1) and '%s' or '%d') % option.discount"/>%
+                            </strong>
+                    </td>
+                    <td name="td_option_price_unit">
+                      <strong class="text-right">
+                        <div t-field="option.price_unit" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}" t-att-style="option.discount and 'text-decoration: line-through' or None" t-att-class="option.discount and 'text-danger' or None"/>
+                        <div t-if="option.discount">
+                          <t t-esc="'%.2f' % ((1-option.discount / 100.0) * option.price_unit)"/>
+                        </div>
+                      </strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="oe_structure"/>
+            <p t-field="doc.note"/>
+            <p t-if="doc.payment_term_id.note">
+              <span t-field="doc.payment_term_id.note"/>
+            </p>
+            <p id="fiscal_position_remark" t-if="doc.fiscal_position_id and doc.fiscal_position_id.sudo().note">
+              <strong>Aclaración de posición fiscal:</strong>
+              <span t-field="doc.fiscal_position_id.sudo().note"/>
+            </p>
+          </div>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">sale.report_saleorder_document_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_saleorder_document copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_report_s_eb1d37b2-87a7-4790-8248-92a512217bba" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="before">
+          <th>
+            <span>Hilandero</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]" position="before">
+          <td>
+            <span t-field="line.x_studio_hilandero"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="after">
+          <th>
+            <span>Hilo</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]" position="after">
+          <td>
+            <span t-field="line.x_studio_hilo"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">100</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[2]" position="after">
+          <th>
+            <span>Composición</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[2]" position="after">
+          <td>
+            <span t-field="line.x_studio_composicin"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">101</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[3]" position="after">
+          <th>
+            <span>GR/M2</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[3]" position="after">
+          <td>
+            <span t-field="line.x_studio_grm2"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">102</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[4]" position="after">
+          <th>
+            <span>Acabado</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[4]" position="after">
+          <td>
+            <span t-field="line.x_studio_acabado"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">103</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[5]" position="after">
+          <th>
+            <span>Kilos</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[5]" position="after">
+          <td>
+            <span t-field="line.x_studio_kilos"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/t[3]/tr/td" position="attributes">
+          <attribute name="colspan">104</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[12]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[12]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[11]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[11]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[9]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[9]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[8]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[8]/span[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[8]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tr[2]/td[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tr[2]/td[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/t[1]/tr[1]/t[1]/td[1]/span[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/t[1]/tr[1]/t[1]/td[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/t[1]/tr[1]/t[1]/td[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tr[1]/td[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tr[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/thead[1]/tr[1]/th[7]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/table[1]/tbody[1]/t[2]/tr[1]/t[1]/td[7]" position="replace"/>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="before">
+          <th>
+            <span>Descripción</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/table/tbody/t[2]/tr/t[1]/td[1]" position="before">
+          <td>
+            <span t-field="line.name"/>
+          </td>
+        </xpath>
+        <xpath expr="/t/t/div/table/thead/tr/th[1]" position="replace">
+          <th>
+            <span>Tela</span>
+          </th>
+        </xpath>
+        <xpath expr="/t/t/div/h2/t[1]/span[2]" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span" position="replace">
+          <span>ORDEN DE TEJIDO</span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/h2[1]/t[1]/span[3]" position="replace"/>
+        <xpath expr="/t/t/div/div[2]/div/span" position="replace">
+          <span>
+            <b>ORDEN DE TEJIDO</b>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div[3]/strong" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="doc.x_studio_folio"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span/b" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>FOLIO:</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.x_studio_folio"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[3]" position="replace">
+          <span>PEDIDO INTERNO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[3]" position="after">
+          <span t-field="doc.x_studio_pedido_interno"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span/b" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span" position="replace">
+          <span>
+            <b>ORDEN DE TEJIDO</b>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[5]/div[6]/strong" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>MODELO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.x_studio_modelo"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>CLIENTE:</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.partner_id"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[4]/div[1]/span[2]" position="attributes">
+          <attribute name="t-field">doc.x_studio_cod_cliente</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>NUM. BAÑO</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.x_studio_num_bao"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.x_studio_color"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>NUM. BAÑO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>COLOR: </span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[4]/div[1]/span[9]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[4]/div[1]/span[9]" position="replace"/>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="replace">
+          <span>FOLIO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[1]" position="after">
+          <span t-field="doc.x_studio_folio"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[3]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[3]" position="replace">
+          <span>VIGENCIA DE.BAÑO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[3]" position="after">
+          <span t-field="doc.x_studio_vig_bao"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[5]" position="before">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[5]" position="replace">
+          <span>MODELO: </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span[5]" position="after">
+          <span t-field="doc.x_studio_modelo"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[4]/div[1]/span[6]" position="replace"/>
+        <xpath expr="/t/t/div/div[4]/div/span[5]" position="after">
+          <span t-field="doc.x_studio_modelo_2"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[5]/div[6]/span[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[5]/div[6]/strong" position="replace">
+          <strong>ELABORADO POR: </strong>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[5]/div[3]/span[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[5]/div[3]/strong" position="replace">
+          <strong>Fecha de orden:</strong>
+        </xpath>
+        <xpath expr="/t/t/div/h2/t[1]/span[2]" position="replace">
+          <span t-if="doc.state in ['draft','sent']">NUM. ORDEN: </span>
+        </xpath>
+        <xpath expr="/t/t/div/h2/t[1]/span[2]" position="replace">
+          <span t-if="doc.state in ['draft','sent']">NUM. ORDEN: </span>
+        </xpath>
+        <xpath expr="/t/t/div/p[1]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[10]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="doc.x_studio_notas_1"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[10]/div/span" position="replace">
+          <span>NOTAS: </span>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.report_saleorder_doc_d9315b1c-0697-4f13-9083-fa98b8421206"/>
+    <field name="key">gen_key.5c0d07</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: report_saleorder_document copy(1) customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_sale_ord_b2d19ab9-e6ee-4820-99f0-7823d1c49e0c" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='amount_tax']" position="replace"/>
+        <xpath expr="//field[@name='amount_untaxed']" position="replace"/>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="x_studio_folio" string="Folio"/>
+          <field name="x_studio_pedido_interno" string="Pedido Interno"/>
+          <field name="x_studio_modelo_2" string="Modelo"/>
+          <field name="x_studio_cod_cliente" string="Cod. Cliente"/>
+          <field name="x_studio_num_bao" string="Num. Baño"/>
+          <field name="x_studio_color" string="Color"/>
+          <field name="x_studio_vig_bao" string="Vig. Baño"/>
+        </xpath>
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="x_studio_notas_1" string="Notas: "/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='product_uom_qty']" position="attributes">
+          <attribute name="string">Kilos</attribute>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='product_uom_qty']" position="after">
+          <field name="x_studio_hilandero" string="Hilandero"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/widget[@name='qty_at_date_widget']" position="after">
+          <field name="x_studio_hilo" string="Hilo"/>
+          <field name="x_studio_composicin" string="Composición"/>
+          <field name="x_studio_grm2" string="GR/M2"/>
+          <field name="x_studio_acabado" string="Acabado"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='price_total']" position="attributes">
+          <attribute name="string">Total Kgs.</attribute>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/group[@name='note_group']/group[@name='sale_total']/div[1]/label[1]" position="attributes">
+          <attribute name="string">Total en Kilos</attribute>
+        </xpath>
+        <xpath expr="//field[@name='amount_total']" position="attributes">
+          <attribute name="string">Total Kgs.</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">sale.order</field>
+    <field name="name">Odoo Studio: sale.order.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_mo_0bfdd652-1a06-42e2-bf15-9c52761acd35" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='date']" position="after">
+          <field name="x_studio_proveedor" string="Proveedor"/>
+          <field name="x_studio_factura_cliente" string="Factura cliente"/>
+          <field name="x_studio_lote_cliente" string="Lote cliente"/>
+          <field name="product_uom_qty"/>
+          <field name="display_name"/>
+          <field name="product_barcode"/>
+        </xpath>
+        <xpath expr="//field[@name='reference']" position="after">
+          <field name="origin"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_move_line_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move.line</field>
+    <field name="name">Odoo Studio: stock.move.line.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_mo_1cc500dc-760b-4ca6-9301-1a7a97a5a676" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='date']" position="after">
+          <field name="is_done"/>
+          <field name="x_studio_lote_cliente" string="Lote cliente"/>
+          <field name="x_studio_factura_cliente" string="Factura cliente"/>
+          <field name="purchase_line_id"/>
+        </xpath>
+        <xpath expr="//field[@name='product_id']" position="after">
+          <field name="next_serial_count"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_move_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move</field>
+    <field name="name">Odoo Studio: stock.move.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_mo_3d672494-be57-467f-a899-1f976396bafd" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='origin']" position="before">
+          <field name="x_studio_factura_cliente"/>
+          <field name="x_studio_lote_cliente"/>
+        </xpath>
+        <xpath expr="//filter[@name='today']" position="after">
+          <filter name="studio_filter_ZC9jH" string="" domain="[[&quot;picking_id.x_studio_cliente&quot;,&quot;ilike&quot;,&quot;Bonmoro&quot;]]"/>
+        </xpath>
+        <xpath expr="//filter[@name='groupby_date']" position="after">
+          <filter name="studio_group_by_BZ90J" string="Owner " context="{'group_by': 'restrict_partner_id'}"/>
+          <filter name="studio_group_by_nh6NZ" string="Reference" context="{'group_by': 'reference'}"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_move_search"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move</field>
+    <field name="name">Odoo Studio: stock.move.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_mo_a3109524-6023-4828-82c3-ffa6ebc8b120" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='picking_id']" position="before">
+          <field name="x_studio_proveedor"/>
+          <field name="x_studio_factura_cliente"/>
+          <field name="x_studio_lote_cliente"/>
+        </xpath>
+        <xpath expr="//filter[@name='groupby_product_id']" position="before">
+          <filter name="studio_group_by_fD3ax" string="Proveedor" context="{'group_by': 'x_studio_proveedor'}"/>
+          <filter name="studio_group_by_sVhfI" string="Factura cliente" context="{'group_by': 'x_studio_factura_cliente'}"/>
+          <filter name="studio_group_by_G3JUz" string="Lote cliente" context="{'group_by': 'x_studio_lote_cliente'}"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.stock_move_line_view_search"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move.line</field>
+    <field name="name">Odoo Studio: stock.move.line.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_pi_3db78fc3-01fb-4fde-9b19-7053a6866b7d" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="x_studio_cliente" string="Cliente"/>
+          <field name="x_studio_factura_cliente"/>
+          <field name="x_studio_lote_cliente"/>
+          <field name="purchase_id"/>
+        </xpath>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="x_studio_ped_interno" string="C-factura"/>
+          <field name="x_studio_folio" string="C-lote"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.vpicktree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.picking</field>
+    <field name="name">Odoo Studio: stock.picking.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_pi_6e43ca62-4bac-4f85-854e-7bcd27cad0a8" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='location_dest_id']" position="after">
+          <field name="x_studio_factura_cliente" string="Factura cliente"/>
+          <field name="x_studio_lote_cliente" string="Lote hilo"/>
+          <field name="x_studio_cajas_recibidas" string="Cajas recibidas"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_picking_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.picking</field>
+    <field name="name">Odoo Studio: stock.picking.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_pi_d6e2fb5c-044c-45e6-98b9-afb6318e678a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//search[1]/field[@name='name']" position="before">
+          <field name="x_studio_lote_cliente"/>
+          <field name="x_studio_factura_cliente"/>
+          <field name="x_studio_cliente"/>
+        </xpath>
+        <xpath expr="//filter[@name='activities_exception']" position="after">
+          <filter name="studio_filter_lkJkx" string="Bonmoro" domain="[[&quot;x_studio_cliente&quot;,&quot;ilike&quot;,&quot;Bonmoro&quot;]]"/>
+          <separator name="studio_separator_1Nhfm"/>
+        </xpath>
+        <xpath expr="//filter[@name='picking_type']" position="after">
+          <filter name="studio_group_by_eGqh3" string="Cliente" context="{'group_by': 'x_studio_cliente'}"/>
+          <filter name="studio_group_by_uHne4" string="Factura cliente" context="{'group_by': 'x_studio_factura_cliente'}"/>
+          <filter name="studio_group_by_Z07jO" string="Lote cliente" context="{'group_by': 'x_studio_lote_cliente'}"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.picking</field>
+    <field name="name">Odoo Studio: stock.picking.internal.search customization</field>
+    <field name="priority">99</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_va_acc6bc63-ed7e-4355-870b-0040fb733825" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='create_date']" position="after">
+          <field name="x_studio_kg_recibidos" string="KG recibidos"/>
+          <field name="x_studio_kg_reservados" string="Kg reservados"/>
+          <field name="categ_id"/>
+        </xpath>
+        <xpath expr="//tree[1]/field[@name='product_id']" position="after">
+          <field name="x_studio_c_lote" string="C-lote"/>
+          <field name="x_studio_c_factura" string="C-Factura"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.valuation.layer</field>
+    <field name="name">Odoo Studio: stock.valuation.layer.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_report_document">
+        <t t-call="web.internal_layout">
+          <div class="page"/>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1_document</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1_document</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_studio_c_52f0a874-4c81-49b7-8f9f-f99e924af803" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/div" position="inside">
+          <table class="table o_report_block_table">
+            <thead>
+              <tr>
+                <th>
+                  <span>Name</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr t-foreach="doc.product_id.product_variant_id.product_variant_id.product_tmpl_id.product_variant_id.stock_move_ids" t-as="table_line">
+                <td>
+                  <span t-field="table_line.display_name"/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1"/>
+    <field name="key">gen_key.d9040f</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1_document customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.report_saleorder_5c5aa39d-196d-4b72-848f-2e4273d5f639" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="sale.report_saleorder_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="sale.report_saleorder_document_copy_1" t-lang="doc.partner_id.lang"/>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">sale.report_saleorder_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_saleorder copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.studio_main_report_9b6116d3-cd5b-4eff-aa10-bf8c1ce54499" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_main_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1_document"/>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">studio_customization.studio_report_docume_199ac5be-9783-4b58-a328-ec0a7d9300f1</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+</odoo>
